@@ -10,19 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 5) do
+ActiveRecord::Schema.define(version: 6) do
 
   create_table "actors", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
   end
 
-  create_table "characters", force: :cascade do |t|
-    t.integer "actor_id"
-    t.string "name"
-    t.integer "show_id"
-    t.index ["actor_id"], name: "index_characters_on_actor_id"
-  end
+# Could not dump table "characters" because of following StandardError
+#   Unknown type 'catchphrase' for column 'string'
 
   create_table "networks", force: :cascade do |t|
     t.string "call_letters"
