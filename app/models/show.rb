@@ -1,3 +1,4 @@
 class Show < ActiveRecord::Base
-  belongs_to 
+  belongs_to :character
+  belongs_to :show 
 end
